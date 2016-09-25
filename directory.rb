@@ -17,6 +17,22 @@ def input_students
     #return the array of students
     students
 end 
+
+def print_header
+    puts "The Students of Villains Acadmey"
+    puts "--------------"
+end 
+
+def print(students)
+    students.each do |student|
+        puts "#{student[:name]} (#{student[:cohort]} cohort"
+    end 
+end 
+
+def print_footer(students)
+    puts "Overall, we have #{students.count} great students\n"
+end 
+
  #Nothing happens until we call the methods
 students = input_students
 print_header
