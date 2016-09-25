@@ -1,7 +1,17 @@
 #First we  print the list of students
 student_count = 11
 #Let's put all students into an array
-students = ["Dr. Hannibal Lecter", "Darth Vader", "Nurse Ratched", "Michael Corleone", "Alex Delarge", "The Wicked Witch of the West", "Terminator", "Freddy Krueger", "The Joker", "Norman Bates"
+students = [
+    {name: "Dr. Hannibal Lecter", cohort: :november}, 
+{name: "Darth Vader", cohort: :november},
+{name: "Nurse Ratched", cohort: :november},
+{name: "Michael Corleone", cohort: :november},
+{name: "Alex Delarge", cohort: :november},
+{name: "The Wicked Witch of the West", cohort: :november},
+{name: "Terminator", cohort: :november},
+{name: "Freddy Krueger", cohort: :november},
+{name: "The Joker", cohort: :november},
+{name: "Norman Bates", chort: :november}
 ]
 #and now print the student names
 def print_header
@@ -9,14 +19,14 @@ puts "The students of Villains Academy"
 puts "-------------"
 end
 
-def print(names)
-names.each do |name|
-    puts name
+def print(students)
+students.each do |student|
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end 
 end 
 #Then we print the total number of awesome students
-def print_footer(names)
-puts "Overall, we have #{names.count} great students\n"  
+def print_footer(students)
+puts "Overall, we have #{students.count} great students\n"  
 end 
 #Nothing happens until we call the methods
 print_header
